@@ -2,19 +2,28 @@
 
 ## About
 
-About Text Here
+Телеграм-бот для поздравлений. Создайте викторину из 5 вопросов (изображение, текст вопроса, четыре варианта ответа). После оплаты, отправьте секретное слово любому пользователю. После прохождения викторины, пользователь получит ваше поздравление.
 
 ## Documentation
 
-Documentation Here
+Для работы бота, создайте в корневой папке файл create_bot.py
+```
+from aiogram import Bot, Dispatcher
+from aiogram.contrib.fsm_storage.memory import MemoryStorage
 
-## Distribute
+TOKEN = '' # вставьте ваш токен телеграм
+QIWI_TOKEN = '' # вставьте ваш токен Qiwi
 
-- [Service Name](Page Link)
+storage = MemoryStorage()
 
+bot = Bot(token=TOKEN)
+dp = Dispatcher(bot, storage=storage)
+```
 
 ## Developers
 
-- [Delevoper Name](GitHub Profile Link)
+- [Sergei Korobov](https://github.com/sergeicastle)
 
 ## License
+
+Project valentines_bot is distributed under the MIT license.
